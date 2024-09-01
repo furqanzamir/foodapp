@@ -1,10 +1,10 @@
 import { useState } from 'react';
-// import {  BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {  BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './App.scss';
 import Navbar from './components/Navbar';
-// import Home from './components/Home';
+import Home from './components/Home';
 import TextForm from './components/TextForm';
-// import About from './components/About';
+import About from './components/About';
 import Footer from './components/Footer';
 function App() {
   const toggleMood = () =>{
@@ -17,9 +17,18 @@ function App() {
   const [moodText, setMood] = useState('light')
   return (
     <>
-     <Navbar title="FZ" aboutTile="About Us" homeText="Home" moodText={moodText} toggleMood={toggleMood}/>
-     <TextForm heading="Enter the text here"  />
-     <Footer/>    
+      <Router>
+        <Navbar title="FZ" aboutTile="About Us" homeText="Home" moodText={moodText} toggleMood={toggleMood}/>
+          <div className="container">
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/home' element={<Home />} />
+              <Route path='/TextForm' element={<TextForm />} heading="Enter the text here" />
+              <Route path='/About' element={<About />} aboutTile="About Us" />
+            </Routes>
+          </div>
+        <Footer/>
+      </Router>
     </>  
   );
 }

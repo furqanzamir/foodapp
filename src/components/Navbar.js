@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+//import PropTypes from 'prop-types'
+
 export default function Navbar(props) {
   return (
     <>
@@ -8,32 +11,34 @@ export default function Navbar(props) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a href='#' className="navbar-brand">{props.title}</a>
+          <Link to='/home' className="navbar-brand">{props.title}</Link>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a href='#' className="nav-link active" aria-current="page">{props.homeText}</a>              
+              <Link to='/home' className="nav-link active" aria-current="page">{props.homeText}</Link>              
             </li>
-            {/* <li className='nav-item'>
-              <a href='/about' className="nav-link active" aria-current="page">{props.aboutTile}</a>
+            <li className='nav-item'>
+              <Link to='/about' className="nav-link active" aria-current="page">{props.aboutTile}</Link>
               </li>
               <li className="nav-item">
-              <a href='/TextForm' className="nav-link">TextForm</a>
+              <Link to='/TextForm' className="nav-link">TextForm</Link>
             </li>
             <li className="nav-item dropdown">
-              <a href='/TextForm' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link to='/TextForm' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Text Form
-              </a>
+              </Link>
               <ul className="dropdown-menu">
-                <li><a href='#' className="dropdown-item">Action</a></li>
-                <li><a href='#' className="dropdown-item">Another action</a></li>
+                <li><Link to='/' className="dropdown-item">Action</Link></li>
+                <li><Link to='/' className="dropdown-item">Another action</Link></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><a href='#' className="dropdown-item">Something else here</a></li>
+                <li><Link to='/' className="dropdown-item">Something else here</Link></li>
               </ul>
             </li>
-            
             <li className="nav-item">
-              <a href='#' className="nav-link disabled">Disabled</a>
-            </li> */}
+              <Link to='/' className="nav-link">Link</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/' className="nav-link disabled">Disabled</Link>
+            </li>
           </ul>
           <span className="navbar-text">
             <div className={`form-check form-switch ${props.moodText === 'light'?'dark':'light'}`}>
@@ -46,7 +51,7 @@ export default function Navbar(props) {
     </nav>
     <nav className="navbar bg-body-tertiary fixed-top d-block d-lg-none">
       <div className="container-fluid">
-        <a href='#' className="navbar-brand">Logo</a>
+        <Link to='/' className="navbar-brand">Logo</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="/#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -58,25 +63,25 @@ export default function Navbar(props) {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <a href='#' className="nav-link active" aria-current="page">Home</a>
+                <Link to='/' className="nav-link active" aria-current="page">Home</Link>
               </li>
               <li className="nav-item">
-                <a href='#' className="nav-link active" aria-current="page">About Us</a>
+                <Link to='/' className="nav-link active" aria-current="page">About Us</Link>
               </li>
               <li className="nav-item">
-                <a href='#' className="nav-link">Link</a>
+                <Link to='/' className="nav-link">Link</Link>
               </li>
               <li className="nav-item dropdown">
-                <a href='#' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <Link to='/' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
-                  <li><a href='#' className="dropdown-item">Action</a></li>
-                  <li><a href='#' className="dropdown-item">Another action</a></li>
+                  <li><Link to='/' className="dropdown-item">Action</Link></li>
+                  <li><Link to='/' className="dropdown-item">Another action</Link></li>
                   <li>
                     <hr className="dropdown-divider"/>
                   </li>
-                  <li><a href='#' className="dropdown-item">Something else here</a></li>
+                  <li><Link to='/' className="dropdown-item">Something else here</Link></li>
                 </ul>
               </li>
             </ul>

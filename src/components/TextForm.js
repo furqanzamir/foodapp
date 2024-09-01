@@ -38,28 +38,28 @@ export default function TextForm(props) {
         <div className="mb-3">         
             <textarea className="form-control" value={text}  onChange={handleOnchange} placeholder='Enter the text click to convert uppercase' id="exampleFormControlTextarea1" rows="8"></textarea>
         </div>
-        <button type='button' className='btn btn-primary me-2' onClick={handleClick}>Convert into Uppercase</button>
-        <button type='button' className='btn btn-primary me-2' onClick={handleClickLower}>Convert into toLowercase</button>
-        <button type='button' className='btn btn-primary me-2' onClick={handleClickcleartext}>Clear Text</button>
-        <button type='button' className='btn btn-primary me-2' onClick={handleClickCopyTxt}>Copy Text</button>
-        <button type='button' className='btn btn-primary me-2' onClick={handleClickremWhitespace}>Remove Whitespaces</button>
+        <button type='button' className='btn btn-primary me-2 my-2' onClick={handleClick}>Convert into Uppercase</button>
+        <button type='button' className='btn btn-primary me-2 my-2' onClick={handleClickLower}>Convert into toLowercase</button>
+        <button type='button' className='btn btn-primary me-2 my-2' onClick={handleClickcleartext}>Clear Text</button>
+        <button type='button' className='btn btn-primary me-2 my-2' onClick={handleClickCopyTxt}>Copy Text</button>
+        <button type='button' className='btn btn-primary me-2 my-2' onClick={handleClickremWhitespace}>Remove Whitespaces</button>
     </div>
     <div className="container mt-4">
-        <div className="row p-4" style={{boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
+        <div className="row gap-2 p-4" style={{boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
             <div className="col-lg-2">
                 <h6>Character: {text.length}</h6>
             </div>
             <div className="col-lg-2">
-                <h6>Words: {text.split(" ").length}</h6>
+                <h6>Words: {text.split(" ").filter((element)=>{return element.length!==0}).length}</h6>
             </div>                
             <div className="col-lg-2">
-                <h6>Minuts to Read: {Math.round(0.008 * text.split(" ").length)}</h6>
+                <h6>Minuts to Read: {Math.round(0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length)}</h6>
             </div>
             <div className="col-lg-2">
-                <h6>Paragraph: {text.split("\n\n").length}</h6>
+                <h6>Paragraph: {text.split("\n\n").filter((element)=>{return element.length!==0}).length}</h6>
             </div>
             <div className="col-lg-2">
-                <h6>Space: {text.split(" ").length}</h6>
+                <h6>Space: {text.split(" ").filter((element)=>{return element.length!==0}).length}</h6>
             </div>
         </div>
     </div>
