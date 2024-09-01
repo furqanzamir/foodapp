@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 //import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
@@ -11,33 +10,30 @@ export default function Navbar(props) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <Link to='/home' className="navbar-brand">{props.title}</Link>
+          <a href='#' className="navbar-brand">{props.title}</a>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to='/home' className="nav-link active" aria-current="page">{props.homeText}</Link>              
+              <a href='#' className="nav-link active" aria-current="page">{props.homeText}</a>              
             </li>
             <li className='nav-item'>
-              <Link to='/about' className="nav-link active" aria-current="page">{props.aboutTile}</Link>
+              <a href='#' className="nav-link active" aria-current="page">{props.aboutTile}</a>
               </li>
-              <li className="nav-item">
-              <Link to='/TextForm' className="nav-link">TextForm</Link>
-            </li>
             <li className="nav-item dropdown">
-              <Link to='/TextForm' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a href='#' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Text Form
-              </Link>
+              </a>
               <ul className="dropdown-menu">
-                <li><Link to='/' className="dropdown-item">Action</Link></li>
-                <li><Link to='/' className="dropdown-item">Another action</Link></li>
+                <li><a href='#' className="dropdown-item">Action</a></li>
+                <li><a href='#' className="dropdown-item">Another action</a></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><Link to='/' className="dropdown-item">Something else here</Link></li>
+                <li><a href='#' className="dropdown-item">Something else here</a></li>
               </ul>
             </li>
             <li className="nav-item">
-              <Link to='/' className="nav-link">Link</Link>
+              <a href='#' className="nav-link">Link</a>
             </li>
             <li className="nav-item">
-              <Link to='/' className="nav-link disabled">Disabled</Link>
+              <a href='#' className="nav-link disabled">Disabled</a>
             </li>
           </ul>
           <span className="navbar-text">
@@ -51,7 +47,7 @@ export default function Navbar(props) {
     </nav>
     <nav className="navbar bg-body-tertiary fixed-top d-block d-lg-none">
       <div className="container-fluid">
-        <Link to='/' className="navbar-brand">Logo</Link>
+        <a href='#' className="navbar-brand">Logo</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="/#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -63,25 +59,25 @@ export default function Navbar(props) {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <Link to='/' className="nav-link active" aria-current="page">Home</Link>
+                <a href='#' className="nav-link active" aria-current="page">Home</a>
               </li>
               <li className="nav-item">
-                <Link to='/' className="nav-link active" aria-current="page">About Us</Link>
+                <a href='#' className="nav-link active" aria-current="page">About Us</a>
               </li>
               <li className="nav-item">
-                <Link to='/' className="nav-link">Link</Link>
+                <a href='#' className="nav-link">Link</a>
               </li>
               <li className="nav-item dropdown">
-                <Link to='/' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href='#' className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
-                </Link>
+                </a>
                 <ul className="dropdown-menu">
-                  <li><Link to='/' className="dropdown-item">Action</Link></li>
-                  <li><Link to='/' className="dropdown-item">Another action</Link></li>
+                  <li><a href='#' className="dropdown-item">Action</a></li>
+                  <li><a href='#' className="dropdown-item">Another action</a></li>
                   <li>
                     <hr className="dropdown-divider"/>
                   </li>
-                  <li><Link to='/' className="dropdown-item">Something else here</Link></li>
+                  <li><a href='#' className="dropdown-item">Something else here</a></li>
                 </ul>
               </li>
             </ul>
