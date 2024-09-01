@@ -8,10 +8,10 @@ export default function Navbar(props) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a href='/' className="navbar-brand">{props.title}</a>
+          <a href='#' className="navbar-brand">{props.title}</a>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a href='/' className="nav-link active" aria-current="page">{props.homeText}</a>              
+              <a href='@' className="nav-link active" aria-current="page">{props.homeText}</a>              
             </li>
             {/* <li className='nav-item'>
               <a href='/about' className="nav-link active" aria-current="page">{props.aboutTile}</a>
